@@ -1,0 +1,131 @@
+{
+  "nodes": [
+    {
+      "op": "null", 
+      "name": "data", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution4_weight", 
+      "attr": {
+        "kernel": "(4, 4)", 
+        "num_filter": "50"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "convolution4_bias", 
+      "attr": {
+        "kernel": "(4, 4)", 
+        "num_filter": "50"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "convolution4", 
+      "attr": {
+        "kernel": "(4, 4)", 
+        "num_filter": "50"
+      }, 
+      "inputs": [[0, 0, 0], [1, 0, 0], [2, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation8", 
+      "attr": {"act_type": "relu"}, 
+      "inputs": [[3, 0, 0]]
+    }, 
+    {
+      "op": "Pooling", 
+      "name": "pooling4", 
+      "attr": {
+        "kernel": "(2, 1)", 
+        "pool_type": "max", 
+        "stride": "(2, 1)"
+      }, 
+      "inputs": [[4, 0, 0]]
+    }, 
+    {
+      "op": "Flatten", 
+      "name": "flatten4", 
+      "inputs": [[5, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "fullyconnected8_weight", 
+      "attr": {"num_hidden": "500"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "fullyconnected8_bias", 
+      "attr": {"num_hidden": "500"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "fullyconnected8", 
+      "attr": {"num_hidden": "500"}, 
+      "inputs": [[6, 0, 0], [7, 0, 0], [8, 0, 0]]
+    }, 
+    {
+      "op": "Activation", 
+      "name": "activation9", 
+      "attr": {"act_type": "relu"}, 
+      "inputs": [[9, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "fullyconnected9_weight", 
+      "attr": {"num_hidden": "1"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "fullyconnected9_bias", 
+      "attr": {"num_hidden": "1"}, 
+      "inputs": []
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "fullyconnected9", 
+      "attr": {"num_hidden": "1"}, 
+      "inputs": [[10, 0, 0], [11, 0, 0], [12, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "linearregressionoutput4_label", 
+      "inputs": []
+    }, 
+    {
+      "op": "LinearRegressionOutput", 
+      "name": "linearregressionoutput4", 
+      "inputs": [[13, 0, 0], [14, 0, 0]]
+    }
+  ], 
+  "arg_nodes": [0, 1, 2, 7, 8, 11, 12, 14], 
+  "node_row_ptr": [
+    0, 
+    1, 
+    2, 
+    3, 
+    4, 
+    5, 
+    6, 
+    7, 
+    8, 
+    9, 
+    10, 
+    11, 
+    12, 
+    13, 
+    14, 
+    15, 
+    16
+  ], 
+  "heads": [[15, 0, 0]], 
+  "attrs": {"mxnet_version": ["int", 1001]}
+}
