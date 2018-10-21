@@ -16,7 +16,7 @@ At a high level, the tool consists of (a) a one-hot vector representation for ra
 
 Usage
 =========================
-The DeepCas9 is performed running the script "main.R". This is a minimal example: source("main.R"). The default test file is "input_example.txt". To run it on other test files, please change the filename parameter in the Onehotencoding function in the "main.R" file.
+The DeepCas9 is performed running the script "main.R". This is a minimal example: source("main.R"). The default test file is "input_example.txt". To run it on other test files, please change the filename parameter in the encodeOntargetSeq function in the "main.R" file.
 
 R function and file
 =========================
